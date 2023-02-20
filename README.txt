@@ -1,6 +1,12 @@
-I have developped a program which finds the longest word of each line in a file. While doing so I have built a StringBuilder struct and a VectorString struct. 
-I have used dependency injection and inversion of control by passing function pointers that read/write from a file, read from user input, calculate the longest word of each line. I have separated the processes of reading user input, reading from a file and calculating the longest word in each line. I wanted to implement separation of concerns and hexagonal architecture. 
-Here is the core function of my program which finds the longest word of each line. I have put almost everything on the heap even though that is not neccessary.
+I have developped a program which finds the longest word of each line in a file.
+While doing so I have built a StringBuilder struct and a VectorString struct. 
+I wanted to implement separation of concerns and hexagonal architecture. 
+I have used dependency injection and inversion of control by passing function pointers that read/write from a file,
+read user input to get the name of the file, calculate the longest word of each line.
+I have separated the processes of reading user input, reading from a file and calculating the longest word in each line.
+I have put almost everything on the heap even though that is not neccessary.
+Here is the core function of my program which finds the longest word of each line.
+
 
 VectorString* getLongestWordsInEachLine(char *text){
     VectorString *wordsOfALine = VectorString_new();
