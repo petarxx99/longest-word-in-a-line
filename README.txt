@@ -7,7 +7,7 @@ VectorString* getLongestWordsInEachLine(char *text){
     VectorString *longestWordsOfLines = VectorString_new();
     StringBuilder *currentWord = StringBuilder_new();
 
-    char previousCharWasALetter = false;
+    bool previousCharWasALetter = false;
     char nextCharacter;
     int i=0;
     while((nextCharacter=text[i]) > 0){
