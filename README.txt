@@ -7,17 +7,17 @@ VectorString* getLongestWordsInEachLine(char *text){
     VectorString *longestWordsOfLines = VectorString_new();
     StringBuilder *currentWord = StringBuilder_new();
 
-    char previousCharWasALetter = 1;
+    char previousCharWasALetter = false;
     char nextCharacter;
     int i=0;
     while((nextCharacter=text[i]) > 0){
         if(isALetter(nextCharacter)){
             StringBuilder_appendChar(currentWord, nextCharacter);
-            previousCharWasALetter = 1;
+            previousCharWasALetter = true;
         } else if(previousCharWasALetter){ /* This character isn't a letter, but the previous one was, therefore we have reached the end of a word.*/
             VectorString_addString(wordsOfALine, currentWord);
             StringBuilder_reset(currentWord);
-            previousCharWasALetter = 0;
+            previousCharWasALetter = false;
         }
 
         if(nextCharacter == END_OF_LINE_CHARACTER){
