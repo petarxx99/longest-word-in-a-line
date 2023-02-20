@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include<string.h>
+#include<stdbool.h>
 
 #define MAX_STRING_LENGTH 4096
 #define FOUR_KB 4096
